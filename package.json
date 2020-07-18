@@ -8,11 +8,16 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "mocha --timeout 10000"
   },
   "author": "Brad Traversy & Gregory Assasie",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "supertest": "^4.0.2"
+  },
   "dependencies": {
     "concurrently": "^4.1.1",
     "cors": "^2.8.5",

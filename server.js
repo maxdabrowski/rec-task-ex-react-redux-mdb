@@ -13,6 +13,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+//testing route
+app.get('/test', (req,res) => {
+  res.send('TEST');
+});
+
 // add new meeting
 app.post('/new', (req, res) => {
   let error = true;
@@ -26,7 +32,16 @@ app.post('/new', (req, res) => {
       res.send({error:error});
     })
   });
+  
+});
+
+app.use((err,req,res,next) =>{
+  res.status(500);
+  res.send(error.stack);
+  res.send('Error!');
 });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => `Server running on port ${PORT}`);
+
+exports.app = app;
