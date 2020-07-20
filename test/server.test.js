@@ -59,7 +59,7 @@ describe('POST', function() {
 
 // test with incorrect object return {error: true}
 describe('POST', function() {
-  it('post wrong object 1',  (done) => {
+  it('post wrong object 2',  (done) => {
     request(app)
     .post("/new")
     //incorect name firstNameError instead firstName
@@ -82,7 +82,7 @@ describe('POST', function() {
 
 // test with incorrect object return {error: true}
 describe('POST', function() {
-  it('post wrong object 1',  (done) => {
+  it('post wrong object 3',  (done) => {
     request(app)
     .post("/new")
     //send empty object
